@@ -1,0 +1,314 @@
+/* ===================== IMPORTANT SETTINGS ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap');
+/* 
+Inter
+font-weight: 100; Thin
+font-weight: 300; Light
+font-weight: 400; Regular
+font-weight: 500; Medium
+font-weight: 600; SemiBold
+font-weight: 700; Bold
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --gold: #D1AB70;
+    --white-2: #FFFAF1;
+    --white: #fff;
+    --black: #1E1E1E;
+    --gray: #6a6a6a;
+    --shadow: #c8ccce;
+    --green: #198754;
+    --red: #dc3545;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+h3 span{
+    color: var(--gold);
+}
+h4{
+    color: var(--gray);
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+h5{
+    margin-bottom: 4px;
+}
+h6{
+    padding-left: 28px;
+    position: relative;
+}
+h6::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 24px;
+    height: 3px;
+    background-color: var(--gold);
+}
+p{
+    color: var(--gray);
+    font-weight: 300;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+    color: var(--gray);
+    font-size: 1rem;
+}
+ul{
+    list-style: none;
+}
+/* ===================== PRE SETTINGS ===================== */
+.rows{
+    display: flex;
+    flex-direction: row;
+}
+.columns{
+    display: flex;
+    flex-direction: column;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}
+.center{
+    margin: 0 auto;
+    padding: 24px 0;
+    max-width: 1064px;
+}
+.main-btn{
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: flex;
+    gap: 8px;
+    background-color: var(--white);
+    transition: 0.3s;
+}
+.main-btn:hover{
+    transform: scale(1.2);
+    box-shadow: 1px 1px 10px var(--white);
+}
+.description-setting{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.title-setting{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+}
+.title-setting h3::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    background-color: var(--gold);
+}
+.disabled-effect{
+    color: gray !important;
+    text-decoration: line-through !important;
+    cursor: not-allowed !important;
+}
+#telegram{
+    width: 60px;
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    box-shadow: 1px 1px 100px #0088CC;
+    border-radius: 100%;
+    border: none;
+}
+.to-top{
+    align-self: end;
+}
+/* ===================== STARTING STYLE ===================== */
+/* --------- SECTION 01 | hero-container --------- */
+.hero-container{
+    height: 100vh;
+    color: var(--white);
+    background-color: var(--black);
+}
+.hero-center{
+    gap: 40px;
+}
+.main-header{
+    justify-content: space-between;
+    align-items: center;
+}
+.main-header nav{
+    gap: 18px;
+}
+.hero-article{
+    max-width: 640px;
+    align-self: center;
+    text-align: center;
+    gap: 24px;
+    /* background-color: #dc3545; */
+}
+.darwin-picture{
+    align-items: center;
+}
+.btn-1{
+    width: 140px;
+    align-items: center;
+    align-self: center;
+    max-width: 250px;
+    gap: 8px;
+    justify-content: space-between;
+}
+/* --------- SECTION 02 | works-container --------- */
+.works-container{
+    padding: 80px 0;
+    background-color: var(--black);
+}
+.works-description p{
+    max-width: 568px;
+}
+.grid-container{
+    margin: 24px;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr auto;
+    gap: 24px;
+}
+.el--1{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+.el--2{
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+.grid-container li{
+    max-width: calc(1fr / 3);
+    gap: 8px;
+}
+.grid-container li div{
+    justify-content: space-between;
+}
+.grid-container li p{
+    width: 204px;
+}
+.grid-container a{
+    color: var(--gold);
+    text-decoration: underline;
+}
+.grid-container img{
+    width: 100%;
+    border-radius: 5px;
+}
+/* --------- SECTION 03 | about-container --------- */
+.about-container{
+    padding: 80px 0;
+    position: relative;
+    background-color: var(--white-2);
+}
+.about-center{
+    justify-content: space-between;
+}
+.about-description{
+    max-width: 780px;
+}
+.about-description p{
+    color: var(--black);
+}
+.about-title h3{
+    color: var(--black);
+}
+.skill-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+}
+.skill-grid-container li{
+    padding: 18px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px #e3d8c6;
+    transition: 0.3s;
+}
+.skill-grid-container li:hover{
+    transform: scale(1.02);
+}
+.skill-grid-container li p{
+    color: var(--gray);
+}
+#profile-2{
+    width: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+/* --------- SECTION 04 | footer-container --------- */
+.footer-container{
+    background-color: var(--black);
+}
+.footer-center div{
+    padding: 24px;
+}
+.footer-center a{
+    max-width: 240px;
+    align-items: center;
+    justify-content: center;
+}
+.footer-contact{
+    align-items: center;
+    gap: 8px;
+}
+.footer-links{
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-links nav{
+    gap: 8px;
+}
+.footer-links nav a:hover{
+    color: var(--white);
+    text-decoration: underline;
+}
+/* --------- responsive --------- */
+@media only screen and (max-width: 1124px) {
+    .center{
+        padding: 24px 2%;
+    }
+    .main-header{
+        justify-content: center;
+    }
+    .nav-right{
+        display: none;
+    }
+    .grid-container{
+        margin: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+    #profile-2{
+        display: none;
+    }
+  }
